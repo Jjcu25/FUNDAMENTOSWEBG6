@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+
+<body>
+    <form action="" method="get">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Ingresar nombre"><br>
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" placeholder="Ingresar apellido"><br>
+        <label for="correo">Correo:</label>
+        <input type="email" id="correo" name="correo"><br>
+        <label for="">Password</label>
+        <input type="password" id="password" name="password">
+        <br>
+        <!--input radio-->
+
+        <input type="radio" id="femenino" name="genero" value="1">
+        <label for="femenino">Femenino</label>
+
+        <input type="radio" id="masculino" name="genero" value="2">
+        <label for="masculino">Masculino</label>
+
+        <input type="radio" id="nose" name="genero" value="3">
+        <label for="nose">No se</label>
+        <br>
+        <!--checkbox-->
+        <label for="java">Java</label>
+        <input type="checkbox" id="java" name="lenguaje" value="1">
+        <label for="js">JavaScript</label>
+        <input type="checkbox" id="js" name="lenguaje" value="2">
+        <label for="python">Python</label>
+        <input type="checkbox" id="python" name="lenguaje" value="3">
+        <br>
+        <!--select-->
+        <select name="lenguajes" id="lenguajes">
+            <option value="0">Seleccione</option>
+            <option value="1">Java</option>
+            <option value="2">JavaScript</option>
+            <option value="3">Python</option>
+
+        </select>
+        <br>
+        <!--textarea-->
+        <textarea id="descripcion" name="descripcion" rows="4" cols="40"></textarea>
+        <br>
+        <input type="hidden" name="modulo" id="modulo" value="1">
+
+        <!--botones-->
+        <input type="button" value="validar">
+        <input type="submit" value="enviar">
+        <br>
+        <!--fecha-->
+        <label for="fecha">Fecha de nacimiento</label>
+        <input type="date" name="fecha">
+    </form>
+</body>
+
+</html>
