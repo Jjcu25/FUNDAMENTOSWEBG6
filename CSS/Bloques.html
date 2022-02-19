@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloques</title>
+    <style>
+        /*CSS reset settings here*/
+        
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        #wrapper {
+            padding: 20px;
+            width: 950px;
+            background-color: silver;
+            margin: 0px auto;
+        }
+        
+        #header {
+            min-height: 150px;
+            background-color: green;
+            margin-bottom: 20px;
+        }
+        
+        #navigation {
+            min-height: 300px;
+            width: 200px;
+            background-color: blue;
+            display: inline-block;
+            margin-right: 20px;
+            vertical-align: top;
+        }
+        
+        #main_content {
+            padding: 10px;
+            min-height: 400px;
+            width: 700px;
+            background-color: red;
+            display: inline-block;
+            vertical-align: top;
+        }
+        
+        .subcontents {
+            margin-right: 10px;
+            min-height: 200px;
+            width: 196px;
+            background-color: yellow;
+            display: inline-block;
+        }
+        
+        #advertisement {
+            margin-top: 20px;
+            min-height: 120px;
+            width: 620px;
+            background-color: purple;
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="header"></div>
+        <div id="navigation"></div>
+        <div id="main_content">
+            <div class="subcontents"></div>
+            <div class="subcontents"></div>
+            <div class="subcontents"></div>
+            <div id="advertisement"></div>
+        </div>
+    </div>
+    <!-- end of wrapper -->
+</body>
+
+</html>
