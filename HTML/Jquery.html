@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() { // estructura jquery
+            //codigo jquery aqui dentro de las llaves
+            //asignar eventos por elemento, clase(.) y id(#);   $("#btn1").evento(function() {});
+            //tipos de funciones
+            //efectos
+            $("#btn1").click(function() {
+                //$("p").hide();//elemento 
+                //$(".container").hide();// clase
+                $("#efex").hide(); // ocultar el  y todo su contenido por id
+            });
+            $("#btn2").click(function() {
+                //$("p").hide();
+                //$(".container").hide();
+                $("#efex").show();
+            });
+            $("#btn3").click(function() {
+                //$("p").hide();
+                //$(".container").hide();
+                $("#efex").toggle(); // mostrar u ocultar el contenido
+            });
+            $("#btn4").click(function() {
+                //$("p").hide();
+                //$(".container").hide();
+                $("#efex").slideUp(); // mostrar u ocultar el contenido
+            });
+            $("#btn5").click(function() {
+                //$("p").hide();
+                //$(".container").hide();
+                $("#efex").slideDown(); // mostrar u ocultar el contenido
+            });
+            $("#btn6").click(function() {
+                //$("p").hide();
+                //$(".container").hide();
+                $("#efex").slideToggle(); // mostrar u ocultar el contenido
+            });
+            $("#btn7").click(function() {
+                //$("p").hide();
+                //$(".container").hide();
+                $("#efex").fadeOut("slow"); // mostrar u ocultar el contenido
+            });
+            $("#btn8").click(function() {
+                //$("p").hide();
+                //$(".container").hide();
+                $("#efex").fadeIn("fast"); // mostrar u ocultar el contenido
+            });
+            $("#btn9").click(function() {
+                //$("p").hide();
+                //$(".container").hide();
+                $("#efex").fadeToggle("fast"); // mostrar u ocultar el contenido
+            });
+
+
+            //estilos(css)
+            $("#btn10").click(function() {
+                $("p").addClass("fs-2 text-danger text-center"); //agregar una clase al elemento 
+            });
+            $("#btn11").click(function() {
+                $("p").removeClass("fs-2 text-danger text-center"); //remueve una clase al elemento 
+            });
+            $("#btn12").click(function() {
+                $("p").css("background-color", "blue"); //agregar un atributo css
+                $("p").css("color", "green");
+                $("p").css("width", "300");
+                $("p").css("margin", "100px");
+            });
+
+            //manipulacion: agregar o eliminar dentro del html
+            $("#btn13").click(function() {
+                $("#efex").after("<p>texto after</p>"); //adiciona texto afuera del elemento al final 
+            });
+            $("#btn14").click(function() {
+                $("#efex").before("<p>texto before</p>"); //adiciona texto afuera del elemento al principio
+            });
+            $("#btn15").click(function() {
+                $("#efex").append("<p>texto append</p>"); //adiciona texto adentro del elemento al final
+            });
+            $("#btn16").click(function() {
+                $("#efex").prepend("<p>texto prepend</p>"); //adiciona texto adentro del elemento al principio
+            });
+            $("#btn17").click(function() {
+                $("#efex").html(`<div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                                    </div>
+                                </div>`);
+            });
+            $("#btn18").click(function() {
+                let texto = $("p").text(); // extrae el texto dentro del o los parrafo
+                alert(texto);
+                $("p").text("ya me esta dando hambre");
+            });
+            $("#btn19").click(function() { //val se utiliza para capturar los input, select y textarea
+                let valor = $("#nombre").val();
+                alert(valor);
+                $("#nombre").val("a comer"); // reemplaza el valor en el input
+            });
+
+
+            //eventos
+            //.click()
+
+
+
+
+        }); //fin jquery
+    </script>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="efex">
+            <br>
+            <input type="text" class="form-class" id="nombre">
+            <p>To make a GIF, you can upload a sequence of GIF, JPG, PNG, BMP, TIFF, HEIC, AVIF, and other types of images, ZIP archive containing images, and even mix different formats and sizes - they will be converted automatically. You can also upload
+                animated GIF, WebP, or APNG images, they will be split and delay times preserved. That way GIF maker can also be used to edit, shorten, or merge together existing GIFs</p>
+
+            <br>
+            <hr>
+        </div>
+        <button class="btn btn-primary" id="btn1">hide()</button>
+        <button class="btn btn-secondary" id="btn2">show()</button>
+        <button class="btn btn-success" id="btn3">toggle()</button>
+        <br>
+        <hr>
+        <button class="btn btn-primary" id="btn4">slideUp()</button>
+        <button class="btn btn-secondary" id="btn5">slideDown()</button>
+        <button class="btn btn-success" id="btn6">slideToggle()</button>
+        <br>
+        <hr>
+        <button class="btn btn-primary" id="btn7">fadeOut()</button>
+        <button class="btn btn-secondary" id="btn8">fadeIn()</button>
+        <button class="btn btn-success" id="btn9">fadeToggle()</button>
+        <br>
+        <hr>
+        <button class="btn btn-primary" id="btn10">addClass()</button>
+        <button class="btn btn-secondary" id="btn11">removeClass()</button>
+        <button class="btn btn-success" id="btn12">css()</button>
+        <br>
+        <hr>
+        <button class="btn btn-primary" id="btn13">after()</button>
+        <button class="btn btn-primary" id="btn14">before()</button>
+        <br>
+        <hr>
+        <button class="btn btn-secondary" id="btn15">append()</button>
+        <button class="btn btn-secondary" id="btn16">prepend()</button>
+        <br>
+        <hr>
+        <button class="btn btn-warning" id="btn17">html()</button>
+        <br>
+        <hr>
+        <button class="btn btn-primary" id="btn18">texto()</button>
+        <button class="btn btn-secondary" id="btn19">val()</button>
+
+
+
+
+
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+
+</html>
